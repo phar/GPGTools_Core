@@ -21,7 +21,7 @@ if [ "`which gpg`" == "" ]; then
 fi
 
 echo "[GCK] Test for GKA..."
-if [ ! -e "/Applications/GPG Keychain Access.app" ]; then
+if [ ! -e "/Applications/GPG Keychain.app" ]; then
   echo "[GCK] No GKA"
   exit 0;
 fi
@@ -38,7 +38,7 @@ if [[ -z "$keys" ]]; then
 	else
 		echo "[GCK] Open GKA..."
 		sudo -u "$USER" osascript <<-EOT
-			tell application "GPG Keychain Access"
+			tell application "GPG Keychain"
 			generate new key
 			activate
 			end tell

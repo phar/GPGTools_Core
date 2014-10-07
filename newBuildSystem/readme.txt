@@ -37,7 +37,7 @@ rmName="Uninstall.app"
 
 imgBackground="Installer/background_dmg.png"
 localizeDir="Installer/localized"
-volumeName="GPG Keychain Access.localized"  # Default
+volumeName="GPG Keychain.localized"  # Default
 volumeLayout="Installer/DS_Store"
 pkgPos="290, 220"
 
