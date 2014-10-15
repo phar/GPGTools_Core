@@ -23,3 +23,5 @@ gpgKey.ownerTrust
 signature.creationDate
 signature.expirationDate
 AMainMenu
+GPGKeychain
+GPG Keychain
