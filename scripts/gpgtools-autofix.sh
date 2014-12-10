@@ -254,7 +254,7 @@ function fixGPG {
 	
     # Add a keyserver if none exits
     if [[ -e "$GNUPGHOME/gpg.conf" ]] && ! grep -q '^[ 	]*keyserver ' "$GNUPGHOME/gpg.conf" ;then
-        echo "keyserver hkp://pool.sks-keyservers.net" >> "$GNUPGHOME/gpg.conf"
+        echo "keyserver hkps://hkps.pool.sks-keyservers.net" >> "$GNUPGHOME/gpg.conf"
     fi
 }
 
