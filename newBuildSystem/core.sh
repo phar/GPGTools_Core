@@ -4,6 +4,13 @@
 # global variables -------------------------------------------------------------
 certNameApp="Developer ID Application: Lukas Pitschl"
 certNameInst="Developer ID Installer: Lukas Pitschl"
+if [ ! -z "$ALT_CERT_NAME_INSTALLER" ]; then
+	certNameInst="$ALT_CERT_NAME_INSTALLER"
+fi
+if [ -z "$certNameInst" ]; then
+	echo "Failed ot set certNameInst"
+	exit 1
+fi
 # ------------------------------------------------------------------------------
 
 function errExit() {
