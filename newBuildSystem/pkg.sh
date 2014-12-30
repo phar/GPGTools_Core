@@ -69,6 +69,12 @@ while [[ -n "${pkgProj_names[$((++i))]}" ]] ;do
 	xmlPath="PROJECT:PROJECT_SETTINGS:CERTIFICATE"
 	/usr/libexec/PlistBuddy -c "delete $xmlPath" "$pkgProj" 2>/dev/null
 
+  # If a custom path for the Libmacgpg core packages is given, replace
+	# that in the pkgproj file
+	if [[ ! -z "$LIBMACGPG_CORE_PATH" ]]; then
+		echo "Replaced Libmacgpg core path with: $LIBMACGPG_CORE_PATH"
+		sed -i .sav "s|../Dependencies/Libmacgpg/|$LIBMACGPG_CORE_PATH/|g" "$pkgProj"
+	fi
 
 	echo "Building '$pkgProj'..."
 	"$pkgBin" "$pkgProj" ||
