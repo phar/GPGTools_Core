@@ -32,7 +32,6 @@ BUILD_JOB_URL = os.getenv("JOB_URL")
 # Jenkins reports the external URL as the JOB URL. However, we have to use the internal one.
 if BUILD_JOB_URL.find("build-ml.gpgtools.org") != -1:
     BUILD_JOB_URL = BUILD_JOB_URL.replace("http://build-ml.gpgtools.org", "http://localhost:8080")
-print "BUILD JOB URL: %s" % (BUILD_JOB_URL)
 BUILD_SERVER_USER = os.getenv("JENKINS_USER")
 BUILD_SERVER_TOKEN = os.getenv("JENKINS_TOKEN")
 BUILD_NR = int(os.getenv("BUILD_NUMBER"))
