@@ -70,7 +70,8 @@ def html_for_release_notes(release_notes, tool):
             E("body",
                 E("div", 
                     E("div", {"class": "sparkle-release-notes"}),
-                    role="main"
+                    role="main", 
+                    id="main"
                 )
             )
         )
