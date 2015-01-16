@@ -63,6 +63,7 @@ def html_for_release_notes(release_notes, tool):
             E("head",
                 E("meta", charset="utf-8"),
                 E("title", title),
+                E("link", rel="script", src="../warning.js"),
                 E("link", rel="stylesheet", href="https://gpgtools.org/css/sparkle-release-notes.1364588334.css"),
                 E("link", rel="stylesheet", href="https://gpgtools.org/css/futura-general.css")
             ),
