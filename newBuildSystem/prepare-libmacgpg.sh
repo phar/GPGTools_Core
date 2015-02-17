@@ -47,7 +47,7 @@ fi
 
 if [[ -z "$libRepo" ]] ;then
 	libRepo=${topRepo%/*}/Libmacgpg
-	git clone -b dev --recursive git://github.com/GPGTools/Libmacgpg.git "$libRepo"
+	git clone -b dev --recursive https://github.com/GPGTools/Libmacgpg.git "$libRepo"
 fi
 
 depsDir=$currentRepo/Dependencies
