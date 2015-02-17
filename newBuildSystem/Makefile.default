@@ -102,8 +102,8 @@ ifdef NEED_LIBMACGPG
 VPATH += :Dependencies/Libmacgpg:Dependencies/Libmacgpg/build/$(CONFIG)/Libmacgpg.framework/Versions/Current:/Library/Frameworks/Libmacgpg.framework/Versions/Current:$(HOME)/Library/Frameworks/Libmacgpg.framework/Versions/Current
 
 $(LIBMACGPG_REPO):
-	@echo "Prepare Libmacgpg"
-	@bash -c "$$(curl -fsSL https://raw.github.com/GPGTools/GPGTools_Core/master/newBuildSystem/prepare-libmacgpg.sh)"
+	@echo "Dependencies/Libmacgpg is missing.\nPlease clone it manually from https://github.com/GPGTools/Libmacgpg\n"
+	@exit 1
 
 Libmacgpg: $(LIBMACGPG_REPO)
 	@"$(MAKE)" -C Dependencies/Libmacgpg compile

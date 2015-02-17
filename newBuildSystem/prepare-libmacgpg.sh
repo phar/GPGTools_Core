@@ -8,7 +8,6 @@
 # Beispiel 2: Aktuelles Projekt /foo/bar/GPGServices/Dependencies/x/Dependencies/y
 # Legt ebenfalls /foo/bar/Libmacgpg an.
 
-# Call with bash -c "$(curl -fsSL https://raw.github.com/GPGTools/GPGTools_Core/master/newBuildSystem/prepare-libmacgpg.sh)"
 
 
 if [[ ${PWD:0:1} != "/" ]] ;then
